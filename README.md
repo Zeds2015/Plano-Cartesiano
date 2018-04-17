@@ -21,5 +21,5 @@ Com esta classe voce pode realizar as seguintes operacoes com vetores (Não é u
 <h2> Para utilizar o app é só digitar python plano_cartesiano.py</h2>
 
 <p>Sobre o mini programa, para realizar uma operação escreva da seguinte forma
-<b>(a,b)</b> operação <b>(c,d)</b> e a operação será realizada. No programa foi adicionada
+<b>(a,b)</b> <em>operação</em> <b>(c,d)</b> e a operação será realizada. No programa foi adicionada
 a opção sobre a qual retorna a posição x e y do vetor além de seu módulo!</p>
