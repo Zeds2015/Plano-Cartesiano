@@ -7,7 +7,7 @@ determinar numeros primos eh uma tarefa arduosa.</p>
 
 <p>
 Alem disso foi criada uma classe que representa pontos em um plano 2D
-Com esta classe voce pode realizar as seguintes operacoes com vetores (N„o È um numpy da vida):
+Com esta classe voce pode realizar as seguintes operacoes com vetores (N√£o √© um numpy da vida):
 
 <ul>
 <li>Somar</li>
@@ -18,6 +18,8 @@ Com esta classe voce pode realizar as seguintes operacoes com vetores (N„o È um 
 </ul>
 </p>
 
-<p>Sobre o mini programa, para realizar uma operaÁ„o escreva da seguinte forma
-<b>(a,b)</b> operaÁ„o <b>(c,d)</b> e a operaÁ„o ser· realizada. No programa foi adicionada
-a opÁ„o sobre a qual retorna a posiÁ„o x e y do vetor alÈm de seu mÛdulo!</p>
+<h2> Para utilizar o app √© s√≥ digitar python plano_cartesiano.py</h2>
+
+<p>Sobre o mini programa, para realizar uma opera√ß√£o escreva da seguinte forma
+<b>(a,b)</b> <em>opera√ß√£o</em> <b>(c,d)</b> e a opera√ß√£o ser√° realizada. No programa foi adicionada
+a op√ß√£o sobre a qual retorna a posi√ß√£o x e y do vetor al√©m de seu m√≥dulo!</p>
