@@ -87,14 +87,10 @@ if __name__ == '__main__':
         lista_de_ocorrencias_tipo_b = list(ocorrencias_tipo_b(entrada))
         ocorrencias_tipo_c = lambda lst: (i for i,e in enumerate(lst) if e in ['==','sobre'])
         lista_de_ocorrencias_tipo_c = list(ocorrencias_tipo_c(entrada))
-
-        assert any([k < i for i in lista_de_ocorrencias_tipo_a for k in lista_de_ocorrencias_tipo_b])
-        assert any([k < i for i in lista_de_ocorrencias_tipo_a for k in lista_de_ocorrencias_tipo_b])
+        assert not (any([k < i for i in lista_de_ocorrencias_tipo_a for k in lista_de_ocorrencias_tipo_b]) and len(lista_de_ocorrencias_tipo_a) > 0)
+            
         #assert any([k < i for i in lista_de_ocorrencias_tipo_b for k in lista_de_ocorrencias_tipo_c])
-
-
         pos_op = lista_de_ocorrencias_tipo_a+lista_de_ocorrencias_tipo_b+lista_de_ocorrencias_tipo_c
-
         for k in pos_op:
             if k in lista_de_ocorrencias_tipo_a and any([i > k for i in lista_de_ocorrencias_tipo_b]):
                 resultado = realizar_operacao_item_sem_prioridade_depois(operacoes,entrada,pontos_cartesianos,k,PontosEm2D(1,1))
