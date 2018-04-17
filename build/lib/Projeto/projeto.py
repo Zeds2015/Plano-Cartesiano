@@ -1,6 +1,6 @@
 class PontosEm2D:
     def __init__(self, x=0, y=0):
-        self._x = x
+        self._x = x 
         self._y = y
     
     @property
@@ -33,7 +33,7 @@ class PontosEm2D:
     
     def __mul__(self, outro_ponto):
         if type(self) == type(outro_ponto):
-            return PontosEm2D(self._x * outro_ponto._x, self._y * outro_ponto._y)
+            return PontosEm2D(self._x * outro_ponto._x,self._y * outro_ponto._y)
         elif type(outro_ponto) == tuple and len(outro_ponto) == 2:
             return (self._x * outro_ponto[0],self._y * outro_ponto[1])
     
@@ -55,6 +55,10 @@ class PontosEm2D:
         except ZeroDivisionError:
             print('Impossivel dividir por zero')
     
+    def converter_para_int(self): 
+        self._x = int(self._x)
+        self._y = int(self._y)
+    
     def __repr__(self):
         return str((self._x, self._y))
     
@@ -63,7 +67,6 @@ class PontosEm2D:
             return self._x == outro_ponto._x and self._y == outro_ponto._y
         elif type(outro_ponto) == tuple and len(outro_ponto) == 2:
             return self._x == outro_ponto[0] and self._y == outro_ponto[1]
-    
     
 if __name__ == '__main__':
     from math import sqrt
