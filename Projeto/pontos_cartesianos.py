@@ -112,8 +112,8 @@ if __name__ == '__main__':
     def inicio():
         operacoes = {'+':somar, '*':multiplicar, '-':subtrair, '/':dividir_float, '//': dividir_inteiro, '==': verificar_igualdade, 'sobre': ver_coordenada}
         print('''Digite desta forma (n,m) operacao (z,e), se voce digitar (a.b) entao sera entendido (a,0.b).
-    Utilize os operadores de maiores precedencia na frente neste padrao 1- (*|/|//) 2- (+|-) 3- (==) | 1- (*|/|//) 2- (+|-) 3- (==) caso queira ver
-    o vetor digite (sobre) no final''')
+Utilize os operadores de maiores precedencia na frente neste padrao 1- (*|/|//) 2- (+|-) 3- (==) | 1- (*|/|//) 2- (+|-) 3- (==) caso queira ver
+o vetor digite (sobre) no final, caso queira sair digite (quit)\n''')
         while True:
             entrada = input('>> ').split(' ')
             if entrada.count('quit') > 0:
