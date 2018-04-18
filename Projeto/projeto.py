@@ -97,6 +97,7 @@ if __name__ == '__main__':
     impares = list(filter(lambda x: x not in pares, fib))
     print(impares)
     
+    print('Calculando, checando e rezando para que o numero seja primo!')
     #captura todos os numeros primos em fibonacci
     primos = list(primos_gerador(fib))
     primos = list(filter(lambda x: x != None and x > 1, primos))
