@@ -75,7 +75,7 @@ if __name__ == '__main__':
         eh_primo = True
         for i in range(2, int(sqrt(num) + 1)):
             if num % i == 0:
-                #eh_primo = not eh_primo
+                eh_primo = False
                 break
                 
         return num if eh_primo else None
