@@ -20,7 +20,7 @@ if __name__ == '__main__':
             if b.x != 0 and b.y != 0:
                 return a//b
             else:
-                print('Impossivel dividir por zero, uma divisao inteira nao pode ter valores menores que um, no denominador!')
+                print('Impossivel dividir por zero, uma divisao inteira nao pode ter valores naturais menores que um, no denominador!')
 
     def dividir_float(a,b):
         if b.x != 0 and  b.y != 0:
@@ -87,9 +87,11 @@ if __name__ == '__main__':
         lista_de_ocorrencias_tipo_b = list(ocorrencias_tipo_b(entrada))
         ocorrencias_tipo_c = lambda lst: (i for i,e in enumerate(lst) if e in ['==','sobre'])
         lista_de_ocorrencias_tipo_c = list(ocorrencias_tipo_c(entrada))
-        assert not (any([k < i for i in lista_de_ocorrencias_tipo_a for k in lista_de_ocorrencias_tipo_b]) and len(lista_de_ocorrencias_tipo_a) > 0)
         
+        assert not (any([k < i for i in lista_de_ocorrencias_tipo_a for k in lista_de_ocorrencias_tipo_b]) and len(lista_de_ocorrencias_tipo_a) > 0)
         pos_op = lista_de_ocorrencias_tipo_a+lista_de_ocorrencias_tipo_b+lista_de_ocorrencias_tipo_c
+        assert len(pos_op) > 0
+        
         for k in pos_op:
             if k in lista_de_ocorrencias_tipo_a and any([i > k for i in lista_de_ocorrencias_tipo_b]):
                 resultado = realizar_operacao_item_sem_prioridade_depois(operacoes,entrada,pontos_cartesianos,k,PontosEm2D(1,1))
@@ -110,7 +112,7 @@ if __name__ == '__main__':
 
     def inicio():
         operacoes = {'+':somar, '*':multiplicar, '-':subtrair, '/':dividir_float, '//': dividir_inteiro, '==': verificar_igualdade, 'sobre': ver_coordenada}
-        print('''Digite desta forma (n,m) operacao (z,e), se voce digitar (a.b) entao sera entendido (a,0.b).
+        print('''Digite desta forma (n,m) operacao (z,e) (USE ESPAÇOS), se voce digitar (a.b) entao sera entendido (a,0.b).
 Utilize os operadores de maiores precedencia na frente neste padrao 1- (*|/|//) 2- (+|-) 3- (==) | 1- (*|/|//) 2- (+|-) 3- (==) caso queira ver
 o vetor digite (sobre) no final, caso queira sair digite (quit)\n''')
         while True:
