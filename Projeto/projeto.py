@@ -76,8 +76,7 @@ if __name__ == '__main__':
         for i in range(2, int(sqrt(num) + 1)):
             if num % i == 0:
                 eh_primo = False
-                break
-                
+                break 
         return num if eh_primo else None
     
     def primos_gerador(fib, i=0):
